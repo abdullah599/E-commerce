@@ -23,25 +23,39 @@ function NavBar() {
           <div className="p-4 block md:hidden z-10" onClick={setNavBar}>
             {!nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
           </div>
-          
-<div className='hidden md:flex items-start justify-start  w-[50%]'>
-    <div className="flex items-center  mx-auto bg-white rounded-lg w-full md:w-[60%]" >
-        <div className="w-full">
-            <input type="search" className="w-full px-4 py-1 text-gray-800 rounded-full focus:outline-none text-sm"
-                placeholder="search"/>
-        </div>
-        <div>
-            <button type="submit" className="flex items-center bg-[color:var(--background-color-2)] justify-center w-12 h-12 text-white rounded-r-lg">
-               
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-</div>
+
+          <div className="hidden md:flex items-start justify-start  w-[50%]">
+            <div className="flex items-center  mx-auto bg-white rounded-lg w-full md:w-[50%]">
+              <div className="w-full">
+                <input
+                  type="search"
+                  className="w-full px-4 py-1 text-gray-800 rounded-full focus:outline-none text-sm"
+                  placeholder="search"
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="flex items-center bg-[color:var(--background-color-2)] justify-center w-12 h-12 text-white rounded-r-lg"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
           <ul className="hidden md:flex lg:ml-[-13rem]">
             <Link
               to=""
@@ -82,10 +96,42 @@ function NavBar() {
           className={
             nav
               ? "hidden"
-              : "relative transition-all duration-500   border-r border-r-gray-900 h-fit bg-[color:var(--background-color-1)] text-white ease-in-out z-2"
+              : "relative transition-all duration-500   border-r border-r-gray-900 h-fit bg-[color:var(--background-color-1)] text-white ease-in-out z-2 pl-5"
           }
         >
           <ul className=" flex flex-col  md:hidden pt-4 z-3">
+            <div className="flex items-start justify-start  w-[50%]">
+              <div className="flex items-center  mx-auto bg-white rounded-lg w-full md:w-[60%]">
+                <div className="w-full">
+                  <input
+                    type="search"
+                    className="w-full px-4 py-1 text-gray-800 rounded-full focus:outline-none text-sm"
+                    placeholder="search"
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    className="flex items-center bg-[color:var(--background-color-2)] justify-center w-12 h-12 text-white rounded-r-lg"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
             <Link
               to="Profile"
               smooth={true}
