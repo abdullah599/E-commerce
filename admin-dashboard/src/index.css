@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* https://www.behance.net/gallery/172070851/E-commerce-Business-Dashboard */
+
+:root{
+
+  --background-color-1:#256eeb;
+  --background-color-2:  #00296f;
+
+  --primary-text-color:rgb(233, 233, 233);
+  --secondary-text-color:#000000;
+  --header-text-color:var(--primary-color);
+
+
+  --primary-color:#ffc818;
+  --primary-link-color:rgb(233, 233, 233);
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
