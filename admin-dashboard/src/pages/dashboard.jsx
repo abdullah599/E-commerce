@@ -41,8 +41,7 @@ const Main = () => {
             <ProductTable />
           </div>
         </div>
-        <div className='flex justify-center
-        '>
+        <div className='flex justify-center z-10'>
           <OrderStatusCard></OrderStatusCard>
         </div>
       </div>

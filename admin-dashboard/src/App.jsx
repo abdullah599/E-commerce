@@ -34,7 +34,7 @@ function App() {
         className={
           !nav
             ? "hidden"
-            : "fixed h-[100%]  text-[color:var(--background-color-1)] width-[12%] "
+            : "fixed h-[100%]  text-[color:var(--background-color-1)] w-[60%] sm:w-[40%] md:w-[30%] z-20"
         }
       >
         <div

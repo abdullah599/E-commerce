@@ -6,9 +6,9 @@ const ProductTable = () => {
     <div className="w-[100%] ">
       <div className="  ">
         <div className="py-8 ">
-          <div className="px-4 py-4    sm:px-8 ">
-            <div className="inline-block min-w-full overflow-hidden rounded-3xl shadow bg-[color:var(--background-color-3)] ">
-              <table className="min-w-full leading-normal bg-[color:var(--background-color-3)]">
+          <div className="    w-[100%]">
+            <div className="inline-block min-w-full overflow-hidden rounded-3xl shadow bg-[color:var(--background-color-3)] w-[100%]">
+              <table className="min-w-full leading-normal bg-[color:var(--background-color-3)] w-[100%]">
                 <thead>
                   <tr className="">
                     <th
