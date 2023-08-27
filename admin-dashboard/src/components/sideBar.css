@@ -1,0 +1,9 @@
+a.active{
+background-color: white;
+color: var(--background-color-2);
+}
+a.pending{
+background-color: var(--background-color-2);
+color: white;
+
+}/*bg-white text-[color:var(--background-color-2)] */

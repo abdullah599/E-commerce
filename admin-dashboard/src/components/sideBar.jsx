@@ -1,8 +1,20 @@
 import React from 'react'
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-const SideBar = () => {
+import { NavLink } from "react-router-dom";
+import { navBar } from '../App';
+import { useAtom } from "jotai";
 
+import './sidebar.css';
+
+const SideBar = () => {
+  const [nav, setNav] = useAtom(
+    navBar
+  );
+
+  const setNavBar = () => {
+    setNav(!nav);
+  };
   
   return (
     <div className=" bg-[color:var(--background-color-2)] h-[100%]  flex flex-col align-center w-[100%] xl:w-[20%] p-5 xl:fixed z-[10000]">
@@ -17,21 +29,35 @@ const SideBar = () => {
         <h1 className="text-white text-[20px]  font-extrabold cursor-pointer mt-3 md:mt-7">
           Admin Panel
         </h1>
-        <a className="mt-3 md:mt-7  text-xl ml-2 p-3  rounded hover:cursor-pointer block bg-white text-[color:var(--background-color-2)]">
+        <NavLink
+          className="mt-3 md:mt-7  text-xl ml-2 p-3  rounded hover:cursor-pointer block bg-[color:var(--background-color-2)] text-white"
+          to="/"
+          onClick={setNavBar}
+        >
           Dashboard
-        </a>
-        <a className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block active:bg-white active:text-[color:var(--background-color-2)]">
+        </NavLink>
+        <NavLink
+          className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block "
+          to="/product"
+          onClick={setNavBar}
+        >
           Product
-        </a>
-        <a className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block active:bg-white active:text-[color:var(--background-color-2)]">
-          Payment
-        </a>
-        <a className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block active:bg-white active:text-[color:var(--background-color-2)]">
+        </NavLink>
+
+        <NavLink
+          className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block "
+          to="/customer"
+          onClick={setNavBar}
+        >
           Customer
-        </a>
-        <a className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block active:bg-white active:text-[color:var(--background-color-2)]">
+        </NavLink>
+        <NavLink
+          className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block"
+          to="/order"
+          onClick={setNavBar}
+        >
           Orders
-        </a>
+        </NavLink>
       </div>
       <div className="absolute bottom-0">
         <button
