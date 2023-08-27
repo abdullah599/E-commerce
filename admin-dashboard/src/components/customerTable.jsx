@@ -1,63 +1,54 @@
-import React from 'react'
-import { Product } from '../DemoData/ProductData'
+import React from "react";
+import { Customer } from "../DemoData/CustomerData";
 
-const ProductTable = () => {
+const CustomerTable = () => {
   return (
-    <div className=" h-[586px] mx-4 max-w-[450px] md:max-w-[1200px]">
-      <div className="  h-[586px] ">
-        <div className="py-8 h-[586px] ">
-          <div className="    w-[100%] h-[586px] ">
-            <div className="inline-block min-w-full overflow-hidden rounded-3xl shadow bg-[color:var(--background-color-3)] w-[100%] h-[586px] ">
-              <table className="min-w-full leading-normal bg-[color:var(--background-color-3)] w-[100%] h-[500px] ">
+    <div className="w-[100%] max-w-[450px] md:max-w-[1200px]">
+      <div className="  ">
+        <div className="py-8 ">
+          <div className="    w-[100%]">
+            <div className="inline-block min-w-full overflow-hidden rounded-3xl shadow bg-[color:var(--background-color-3)] w-[100%]">
+              <table className="min-w-full leading-normal bg-[color:var(--background-color-3)] w-[100%]">
                 <thead>
                   <tr className="">
                     <th
                       scope="col"
                       className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200 "
                     >
-                      Product ID
+                      Customer
+                    </th>
+
+                    <th
+                      scope="col"
+                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
+                    >
+                      Email
                     </th>
                     <th
                       scope="col"
                       className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
                     >
-                      Product
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
-                    >
-                      Price
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
-                    >
-                      Stock
+                      Address
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {Product.map((product) => (
+                  {Customer.map((customer) => (
                     <tr className="bg-[color:var(--background-color-3)]">
                       <td className="px-5 py-5 text-sm  border-b border-gray-200">
                         <div className="flex items-center">
                           <div className="flex-shrink-0"></div>
                           <div class="ml-3">
                             <p class="text-gray-900 whitespace-no-wrap">
-                              {product.id}
+                              {customer.first_name + " " + customer.last_name}
                             </p>
                           </div>
                         </div>
                       </td>
+
                       <td className="px-5 py-5 text-sm  border-b border-gray-200">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {product.name}
-                        </p>
-                      </td>
-                      <td className="px-5 py-5 text-sm  border-b border-gray-200">
-                        <p className="text-gray-900 whitespace-no-wrap">
-                          {product.price}
+                          {customer.email}
                         </p>
                       </td>
                       <td className="px-5 py-5 text-sm  border-b border-gray-200">
@@ -66,9 +57,7 @@ const ProductTable = () => {
                             aria-hidden="true"
                             className="absolute inset-0 bg-green-200 rounded-full opacity-50"
                           ></span>
-                          <span className="relative">
-                            {product.stock_quantity}
-                          </span>
+                          <span className="relative">{customer.address}</span>
                         </span>
                       </td>
                     </tr>
@@ -141,4 +130,4 @@ const ProductTable = () => {
   );
 };
 
-export default ProductTable;
+export default CustomerTable;

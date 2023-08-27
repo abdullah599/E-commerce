@@ -1,12 +1,11 @@
-import React from 'react'
-import TodayCard from '../components/todayCard'
+import React from "react";
+import TodayCard from "../components/todayCard";
 import OrderStatusCard from "../components/orderStatusCard";
 import RevenueChart from "../components/revenueChart";
-
-import ProductTable from '../components/productTable';
+import CustomerTable from "../components/customerTable";
+import ProductTable from "../components/productTable";
 
 const Main = () => {
-  
   return (
     <div className=" xl:ml-5 ">
       <h1 className="text-3xl text-[color:var(--background-color-1)] font-semibold p-4 xl:mt-7">
@@ -38,15 +37,16 @@ const Main = () => {
             <RevenueChart></RevenueChart>
           </div>
           <div className="m-4 ">
-            <ProductTable />
+            <CustomerTable />
           </div>
         </div>
-        <div className='flex justify-center z-10'>
+        <div className="flex  z-10 flex-col content-center">
           <OrderStatusCard></OrderStatusCard>
+          <ProductTable />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Main
+export default Main;

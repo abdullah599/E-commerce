@@ -25,7 +25,7 @@ const OrderStatusCard = (props) => {
   const COLORS = ["#00296f", "#f2bb05", "#e71d36"];
 
   return (
-    <div className="relative rounded-3xl w-[450px] h-[450px] bg-[color:var(--background-color-3)] p-5 text-[color:var(--background-color-1)] text-2xl m-4">
+    <div className="relative rounded-3xl w-[450px] h-[450px] bg-[color:var(--background-color-3)] p-5 text-[color:var(--background-color-1)] text-2xl m-4 mx:auto">
       <span className="text-2xl flex justify-center font-bold">Order Status</span>
       <div width="100%" height="100%">
         <PieChart width={400} height={350}>

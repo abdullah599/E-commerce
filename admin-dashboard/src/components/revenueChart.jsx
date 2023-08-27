@@ -46,7 +46,7 @@ const RevenueChart = () => {
     
 
   return (
-    <div className="bg-[color:var(--background-color-3)] m-5 rounded-3xl text-[color:var(--background-color-1)] ">
+    <div className="bg-[color:var(--background-color-3)] m-5 rounded-3xl text-[color:var(--background-color-1)] max-w-[450px] md:max-w-[1200px]">
       <h1 className="text-2xl p-5 font-bold">Revenue Report</h1>
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart
