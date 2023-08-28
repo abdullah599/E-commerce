@@ -7,11 +7,18 @@ import { useAtom } from "jotai";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { BiCube } from "react-icons/bi";
 import { FiUsers } from "react-icons/fi";
-import {TbLogout2} from 'react-icons/tb'
+import { TbLogout2 } from 'react-icons/tb'
+import { loggedIn } from '../App';
+
 
 import './sidebar.css';
 
 const SideBar = () => {
+
+  const [login, setLogin] = useAtom(loggedIn);
+  const setLoginStat = () => {
+    setLogin(!login);
+  }
   const [nav, setNav] = useAtom(
     navBar
   );
@@ -35,7 +42,7 @@ const SideBar = () => {
         </h1>
         <NavLink
           className="mt-3 md:mt-7  text-xl ml-2 p-3  rounded hover:cursor-pointer block bg-[color:var(--background-color-2)] text-white"
-          to="/"
+          to="/dashboard"
           onClick={setNavBar}
         >
           <MdOutlineSpaceDashboard className="inline" />
@@ -74,7 +81,7 @@ const SideBar = () => {
         >
           {" "}
           <TbLogout2 className="inline" />
-          <h1 className="ml-3 inline-block">Logout</h1>
+          <NavLink to="/" className="ml-3 inline-block" onClick={setLoginStat}>Logout</NavLink>
         </button>
       </div>
     </div>
