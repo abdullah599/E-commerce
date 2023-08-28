@@ -57,7 +57,7 @@ const RevenueChart = () => {
         >
           <defs>
             <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#00296f" stopOpacity={0.8} />
+              <stop offset="5%" stopColor="#256eeb" stopOpacity={0.8} />
               <stop offset="95%" stopColor="#256eeb" stopOpacity={0} />
             </linearGradient>
           </defs>
@@ -72,9 +72,8 @@ const RevenueChart = () => {
             stroke="#256eeb"
             fillOpacity={1}
             fill="url(#colorPv)"
-          >
-          </Area>
-            <Legend/>
+          ></Area>
+          <Legend />
         </AreaChart>
       </ResponsiveContainer>
     </div>
