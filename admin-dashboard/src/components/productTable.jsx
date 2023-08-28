@@ -10,28 +10,28 @@ const ProductTable = () => {
             <div className="inline-block min-w-full overflow-hidden rounded-3xl shadow bg-[color:var(--background-color-3)] w-[100%] h-[586px] ">
               <table className="min-w-full leading-normal bg-[color:var(--background-color-3)] w-[100%] h-[500px] ">
                 <thead>
-                  <tr className="">
+                  <tr className="bg-[color:var(--background-color-1)]">
                     <th
                       scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200 "
+                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase  border-b border-gray-200 "
                     >
                       Product ID
                     </th>
                     <th
                       scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
+                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase  border-b border-gray-200"
                     >
                       Product
                     </th>
                     <th
                       scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
+                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase border-b border-gray-200"
                     >
                       Price
                     </th>
                     <th
                       scope="col"
-                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase bg-[color:var(--background-color-2)] border-b border-gray-200"
+                      className="px-5 py-3 text-sm font-normal text-left text-white uppercase  border-b border-gray-200"
                     >
                       Stock
                     </th>

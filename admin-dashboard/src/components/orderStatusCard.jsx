@@ -22,7 +22,7 @@ const OrderStatusCard = (props) => {
     { name: "Failed", value: 10 },
   ];
 
-  const COLORS = ["#00296f", "#f2bb05", "#e71d36"];
+  const COLORS = ["#256eeb", "#f2bb05", "#e71d36"];
 
   return (
     <div className="relative rounded-3xl w-[450px] h-[450px] bg-[color:var(--background-color-3)] p-5 text-[color:var(--background-color-1)] text-2xl m-4 mx:auto">

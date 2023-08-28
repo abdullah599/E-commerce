@@ -1,9 +1,13 @@
 import React from 'react'
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineStar } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { navBar } from '../App';
 import { useAtom } from "jotai";
+import { MdOutlineSpaceDashboard } from "react-icons/md";
+import { BiCube } from "react-icons/bi";
+import { FiUsers } from "react-icons/fi";
+import {TbLogout2} from 'react-icons/tb'
 
 import './sidebar.css';
 
@@ -21,12 +25,12 @@ const SideBar = () => {
       <div className=" w-[100%] ">
         <h1
           className={
-            "text-[var(--header-text-color)] text-[25px] leading-[24px] font-extrabold cursor-pointer md:mt-7"
+            "text-[var(--header-text-color)] text-[25px] leading-[24px] font-extrabold cursor-pointer md:mt-7 xl:ml-5"
           }
         >
           Brand Name
         </h1>
-        <h1 className="text-white text-[20px]  font-extrabold cursor-pointer mt-3 md:mt-7">
+        <h1 className="text-white text-[20px]  font-extrabold cursor-pointer mt-3 md:mt-7 xl:ml-5">
           Admin Panel
         </h1>
         <NavLink
@@ -34,14 +38,16 @@ const SideBar = () => {
           to="/"
           onClick={setNavBar}
         >
-          Dashboard
+          <MdOutlineSpaceDashboard className="inline" />
+          <h1 className="ml-3 inline-block"> Dashboard</h1>
         </NavLink>
         <NavLink
           className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block "
           to="/product"
           onClick={setNavBar}
         >
-          Product
+          <BiCube className="inline" />
+          <h1 className="ml-3 inline-block">Product</h1>
         </NavLink>
 
         <NavLink
@@ -49,14 +55,16 @@ const SideBar = () => {
           to="/customer"
           onClick={setNavBar}
         >
-          Customer
+          <FiUsers className="inline" />
+          <h1 className="ml-3 inline-block">Customer</h1>
         </NavLink>
         <NavLink
           className="mt-1 md:mt-7 text-white text-xl ml-2 p-3  rounded hover:cursor-pointer block"
           to="/order"
           onClick={setNavBar}
         >
-          Orders
+          <AiOutlineStar className="inline" />
+          <h1 className="ml-3 inline-block">Orders</h1>
         </NavLink>
       </div>
       <div className="absolute bottom-0">
@@ -64,13 +72,9 @@ const SideBar = () => {
           href="#"
           className="block text-xl font-bold text-white p-6 hover:cursor-pointer "
         >
-          Setting
-        </button>
-        <button
-          href="#"
-          className="block text-xl font-bold text-white p-6 hover:cursor-pointer "
-        >
-          Logout
+          {" "}
+          <TbLogout2 className="inline" />
+          <h1 className="ml-3 inline-block">Logout</h1>
         </button>
       </div>
     </div>
